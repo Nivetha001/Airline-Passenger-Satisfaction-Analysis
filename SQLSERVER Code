@@ -1,0 +1,44 @@
+# SQLSERVER 
+_____________
+
+1. select * from [dbo].[airline_passenger_satisfaction$]
+
+2. select distinct[Satisfaction] from [dbo].[airline_passenger_satisfaction$]
+
+3. select count(distinct(id)) as unique_ids from [dbo].[airline_passenger_satisfaction$]
+
+4. select count(distinct(id)) as satisfied_customers_countfrom [dbo].[airline_passenger_satisfaction$] where Satisfaction='satisfied'
+
+5. select count(distinct(id))as un_satisfied_customers_count from [dbo].[airline_passenger_satisfaction$] where Satisfaction='Neutral or Dissatisfied'
+
+6. select count(id) from airline_passenger_satisfaction$ where [Customer Type]='Returning' and[Satisfaction]='Neutral or Dissatisfied'
+
+7. select gender,AVG([seat comfort])  from aps group by gender;
+
+8. select AVG([seat comfort])  from aps;
+
+9. select round(AVG([seat comfort]),1,0)as avg_business from aps where Class='Business';
+
+10.select round(AVG([seat comfort]),1,0) as avg_economy from aps where Class='economy';
+
+11.select round(AVG([seat comfort]),1,0) as avg_ec_plus from aps where Class='economy plus';
+
+12.count_of_column
+-------------------------------------------------------------------------------------
+SELECT count(*)
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'aps'
+--------------------------------------------------------------------------------------
+13.column name
+---------------------------------------------------------------------------------------
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'aps'
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
